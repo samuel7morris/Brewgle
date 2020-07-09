@@ -6,8 +6,8 @@ $('#submit-button').on('click', function(
 ));
 
 
-var searchTerm = "";
-var searchLocation = "";
+var searchTerm = "tacos";
+var searchLocation = "80301";
 
 $.ajax({
     url: `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${searchTerm}&location=${searchLocation}`,
