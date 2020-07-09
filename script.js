@@ -1,6 +1,6 @@
 //Onclick to get value of input and store in variable
 
-$('#submit-button').on('click', function () {
+$('#submit-button').on('click', function() {
   var userInput = $('#user-input').val();
   console.log(userInput);
 });
@@ -20,18 +20,13 @@ function searchYelp(searchLocation) {
   });
 }
 
-
-
 //Google Maps API
 //Andrew's Key: AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ
 var map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
+    center: { lat: -34.397, lng: 150.644 },
     zoom: 8
   });
 }
