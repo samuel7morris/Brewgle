@@ -1,3 +1,4 @@
+$(document).ready(function(){
 //Onclick to get value of input and store in variable
 
 $('#submit-button').on('click', function() {
@@ -9,7 +10,7 @@ $('#submit-button').on('click', function() {
 var searchTerm = "tacos";
 var searchLocation = "80301";
 
-function searchYelp(searchLocation) {
+function searchYelp() {
   $.ajax({
     url: `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${searchTerm}&location=${searchLocation}`,
     method: "GET",
@@ -40,3 +41,4 @@ function initMap() {
   });
 }
 //End of Google Maps API
+});
