@@ -6,29 +6,40 @@
     <title>Brewgle</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'>
     <link rel="stylesheet" href="styles.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- GMaps API -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ&callback=initMap"></script>
+      
+    <!-- Our Script File -->
+    <script type="text/javascript" src="script.js"></script>
+    <body>
+        <section class="section">
 <body>
     <h1>Hello World</h1>
     <h2>Testing Git</h2>
-<div class="level">
-    <form id='searchg'>
-        <input class="input is-medium level-left" type="text" placeholder="Breweries">
-        <input class="button" type="submit" value="Submit input">
-    </form>
-  </div>
   <section class="section">
           <div class="container">
             <h1 class="title">Brewgle</h1>
             <h2 class="subtitle">subtitle here</h2>
-                maybe a description of the site here??
-                    <div class="container">
-                        <div class="notification" id="map">
-                          
-                        </div>
-                      </div> 
+                maybe a description of the site here??  
           </div>
-        </section>
-      </body>
-
-
-
+  </section class="section">
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="level">
+              <form id='search'>
+                  <input class="input is-medium level-left" type="text" placeholder="Breweries">
+                  <input class="button" type="submit" value="Search">
+              </form>
+            </div>
+        </div>
+        <div class="column">
+            <div class="container">
+              <div class="notification" id="map">  
+              </div>
+            </div> 
+        </div>
+</body>
 </html>
