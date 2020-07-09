@@ -1,15 +1,16 @@
 $(document).ready(function(){
 //Onclick to get value of input and store in variable
-$('#submit-button').on('click', function() { 
-  event.preventDefault();
+
+$('#submit-button').on('click', function() {
   var userInput = $('#user-input').val();
   console.log(userInput);
+  
 });
 
-var searchTerm = "brewery";
+var searchTerm = "tacos";
 var searchLocation = "80301";
 
-function searchYelp(searchLocation) {
+function searchYelp() {
   $.ajax({
     url: `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${searchTerm}&location=${searchLocation}`,
     method: "GET",
@@ -18,8 +19,14 @@ function searchYelp(searchLocation) {
     }
   }).then(function (response) {
     console.log(response);
+    for (var i = 0; i < response.businesses.length; i++){
+        if (response.businesses[i].length < 10){
+
+        }
+    }
   });
 }
+searchYelp()
 
 
 
@@ -29,10 +36,7 @@ var map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
+    center: { lat: -34.397, lng: 150.644 },
     zoom: 8
   });
 }
