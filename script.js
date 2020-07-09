@@ -3,9 +3,10 @@
 $('#submit-button').on('click', function() {
   var userInput = $('#user-input').val();
   console.log(userInput);
+  
 });
 
-var searchTerm = "brewery";
+var searchTerm = "tacos";
 var searchLocation = "80301";
 
 function searchYelp(searchLocation) {
@@ -17,8 +18,16 @@ function searchYelp(searchLocation) {
     }
   }).then(function (response) {
     console.log(response);
+    for (var i = 0; i < response.businesses.length; i++){
+        if (response.businesses[i].length < 10){
+
+        }
+    }
   });
 }
+searchYelp()
+
+
 
 //Google Maps API
 //Andrew's Key: AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ
