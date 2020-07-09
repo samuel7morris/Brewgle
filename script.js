@@ -2,10 +2,11 @@ $(document).ready(function(){
 //Onclick to get value of input and store in variable
 
 $('#submit-button').on('click', function() {
+  event.preventDefault();
   var userInput = $('#user-input').val();
   console.log(userInput);
   
-});
+
 
 var searchTerm = "tacos";
 var searchLocation = "80301";
@@ -28,6 +29,7 @@ function searchYelp() {
 }
 searchYelp()
 
+});
 
 
 //Google Maps API
