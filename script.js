@@ -1,29 +1,11 @@
+//Onclick to get value of input and store in variable
+
+$('#submit-button').on('click', function(
+  var userInput = $('#user-input').val();
+  console.log(userInput);
+));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Google Maps API
-//Andrew's Key: AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8
-  });
-}
-//End of Google Maps API
-=======
 var searchTerm = "";
 var searchLocation = "";
 
@@ -36,3 +18,14 @@ $.ajax({
 }).then(function (response) {
     console.log(response);
 });
+
+//Google Maps API
+//Andrew's Key: AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
+}
+//End of Google Maps API
