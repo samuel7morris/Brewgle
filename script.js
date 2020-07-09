@@ -1,10 +1,9 @@
 //Onclick to get value of input and store in variable
 
-$('#submit-button').on('click', function(
-  var userInput = $('#user-input').val();
+$('#submit-button').on('click', function() {
+  var userInput = $('user-input').val();
   console.log(userInput);
-));
-
+});
 
 var searchTerm = "";
 var searchLocation = "";
