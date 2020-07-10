@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+$(document).ready(function(){
+//Onclick to get value of input and store in variable
+
+$('#submit-button').on('click', function() {
+  event.preventDefault();
+  var userInput = $('#user-input').val();
+  console.log(userInput);
+  
+
+
+var searchTerm = "breweries";
+// var searchLocation = "80301";
+
+function searchYelp() {
+  $.ajax({
+    url: `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${searchTerm}&location=${userInput}`,
+    method: "GET",
+    headers: {
+      "Authorization": "Bearer AmvxFoRRCm1gPrumi5fAr7uEGkpOAeDoFKKAjJ_zhHo4uB4-RFb2GLyvQ-CBbVvdi7syTFO5y2WIgTYOqfWdaUp6duFzLRfCGh5-0o6Blh3AQlKgvy-jGqvLui8HX3Yx"
+    }
+  }).then(function (response) {
+    console.log(response);
+    $("#top").empty()
+    for (var i = 0; i < response.businesses.length; i++){
+       var row = $("<tr>")
+       var name = $("<td>").text(response.businesses[i].name)
+       var rating = $("<td>").text("Stars: " + response.businesses[i].rating)
+       var phone = $("<td>").text("Phone: " + response.businesses[i].phone)
+       $("#top").append(row)
+       row.append(name)
+       name.append(phone)
+       phone.append(rating)
+    }
+  });
+}
+searchYelp()
+
+=======
 $(document).ready(function() {
 	//Onclick to get value of input and store in variable
 
@@ -52,4 +91,5 @@ $(document).ready(function() {
 		}
 		searchYelp();
 	});
+>>>>>>> master
 });
