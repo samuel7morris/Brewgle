@@ -81,15 +81,16 @@ $(document).ready(function() {
 						var marker = new google.maps.Marker({
 							position: latLong,
 							map: map,
-							title: name
+							title: name[i]
 						});
+						marker.setMap(map);
 					}
 					//End of Google Maps API
 				}
-				initMap();
 			});
 		}
 		searchYelp();
+		initMap();
 	});
 >>>>>>> master
 });
