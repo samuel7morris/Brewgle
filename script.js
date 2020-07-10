@@ -20,10 +20,12 @@ function searchYelp() {
     }
   }).then(function (response) {
     console.log(response);
-    $(".top").empty()
+    $("#top").empty()
     for (var i = 0; i < response.businesses.length; i++){
-       var name = $("<h3>").text(response.businesses[i].name)
-       map.append(name)
+       var name = $("<li>").text(response.businesses[i].name)
+       var rating = $("<li>").text(response.businesses[i].rating)
+       var phone = $("<li>").text(response.businesses[i].phone)
+       $("#top").append(name, phone, rating)
     }
   });
 }
