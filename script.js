@@ -22,10 +22,14 @@ function searchYelp() {
     console.log(response);
     $("#top").empty()
     for (var i = 0; i < response.businesses.length; i++){
-       var name = $("<li>").text(response.businesses[i].name)
-       var rating = $("<li>").text(response.businesses[i].rating)
-       var phone = $("<li>").text(response.businesses[i].phone)
-       $("#top").append(name, phone, rating)
+       var row = $("<tr>")
+       var name = $("<td>").text(response.businesses[i].name)
+       var rating = $("<td>").text("Stars: " + response.businesses[i].rating)
+       var phone = $("<td>").text("Phone: " + response.businesses[i].phone)
+       $("#top").append(row)
+       row.append(name)
+       name.append(phone)
+       phone.append(rating)
     }
   });
 }
