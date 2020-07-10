@@ -8,7 +8,7 @@ $('#submit-button').on('click', function() {
   
 
 
-var searchTerm = "tacos";
+var searchTerm = "breweries";
 // var searchLocation = "80301";
 
 function searchYelp() {
@@ -22,7 +22,7 @@ function searchYelp() {
     console.log(response);
     for (var i = 0; i < response.businesses.length; i++){
         if (response.businesses[i].length < 10){
-
+          console.log(response)
         }
     }
   });
