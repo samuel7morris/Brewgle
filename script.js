@@ -31,19 +31,19 @@ $(document).ready(function() {
 					phone.append(rating);
 					var latitude = response.businesses[i].coordinates.latitude;
 					var longitude = response.businesses[i].coordinates.longitude;
+					var pinName = response.businesses[i].name.toString();
 					coordinates = { lat: latitude, lng: longitude };
 					latLong.push(coordinates);
-					console.log(latLong);
 					map = new google.maps.Map(document.getElementById('map'), {
 						center: coordinates,
-						zoom: 8
+						zoom: 12
 					});
 					for (var i = 0; i < latLong.length; i++) {
 						var marker = new google.maps.Marker({
 							position: { lat: latLong[i].lat, lng: latLong[i].lng },
 							map: map,
 							center: coordinates,
-							title: name.toString()
+							title: pinName
 						});
 					}
 					marker.setMap(map);
@@ -59,6 +59,6 @@ var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: { lat: -34.397, lng: 150.644 },
-		zoom: 8
+		zoom: 10
 	});
 }
