@@ -38,6 +38,7 @@ $(document).ready(function() {
 						center: coordinates,
 						zoom: 12
 					});
+					//Loop through the array of responses and create a marker for each using their geographic location and displaying the name
 					for (var i = 0; i < latLong.length; i++) {
 						var marker = new google.maps.Marker({
 							position: { lat: latLong[i].lat, lng: latLong[i].lng },
