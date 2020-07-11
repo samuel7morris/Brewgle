@@ -11,7 +11,8 @@ body {
   margin: 0;
   padding: 0;
 }
-.title {
+
+.title, .subtitle {
   font-family: 'Galada', cursive;
 }
 
