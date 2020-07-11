@@ -14,49 +14,39 @@
       
     <!-- Our Script File -->
     <script type="text/javascript" src="script.js"></script>
-    <body>
-        
-        <section class="section  mx-5">
-            <div class="container has-text-centered mx-6">
-                <h1 class="title">Brewgle</h1>
-                <h2 class="subtitle">subtitle here</h2>
-                maybe a description of the site here??  
+<body>
+      
+    <!-- <section class="section mx-5">
+        <div class="container has-background-info has-text-centered mx-6"> -->
+            <h1 class="title has-text-centered">Brewgle</h1>
+            <h2 class="subtitle has-text-centered">subtitle here</h2>
+        maybe a description of the site here??  
+        <!-- </div>
+    </section> -->
+
+    <div class="results has-background-info has-text-centered mx-6">      
+            <div class="container is-small">
+                <form id="searching">
+                    <input class="input is-large level-left" type="text" placeholder="Breweries" id="user-input">
+                    <input class="button" type="submit" value="Find Brews!" id="submit-button">
+                </form>
             </div>
-        </section class="section">
-        
-<section class="results has-background-info has-text-centered mx-6">      
-    <div class="container is-small">
-        <form id="searching">
-            <input class="input is-large level-left" type="text" placeholder="Breweries" id="user-input">
-            <input class="button" type="submit" value="Find Brews!" id="submit-button">
-        </form>
-  </div>
-</section>
+       </div>
 
-<div class="columns">
-
-
-    <div class="column is-two-fifths mx-6">
-    <section class="section">
-        <div class="container">
-          <h1 class="title">List of Breweries</h1>
-            <table id="top">
-            </table>
-        </div>
-    </section>
+    <div class='columns'>
+    <div class="column is-two-fifths has-background-info has-text-centered mx-6">
+            <div class="container">
+                <h1 class="title">List of Breweries</h1>
+                <ul id="top">
+                </ul>
+            </div>
     </div>
-
-
-    <div class="column has-background-info has-text-centered mx-6">
-    <section class="section"></section>
-        <div class="container mx-4">
-            <h1 class="title">Map</h1>
-            <iframe id="map"></iframe> 
-        </div>
-    </section>
+    <div class="column has-background-info has-text-centered mx-6">       
+            <div class="container mx-4">
+                <h1 class="title">Map</h1>
+                <iframe id="map"></iframe> 
+            </div>
     </div>
-
-
 </div>
 </body>
-</html>
+</html>      
