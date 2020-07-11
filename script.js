@@ -34,16 +34,19 @@ $(document).ready(function() {
 					coordinates = { lat: latitude, lng: longitude };
 					latLong.push(coordinates);
 					console.log(latLong);
-					for (var i=0;i < latLong.length;i++) {
+					map = new google.maps.Map(document.getElementById('map'), {
+						center: coordinates,
+						zoom: 8
+					});
+					for (var i = 0; i < latLong.length; i++) {
 						var marker = new google.maps.Marker({
-							position: {lat: latLong[i].lat,lng:latLong[i].lng},
+							position: { lat: latLong[i].lat, lng: latLong[i].lng },
 							map: map,
 							center: coordinates,
 							title: name.toString()
 						});
 					}
 					marker.setMap(map);
-
 				}
 			});
 		}
@@ -53,11 +56,9 @@ $(document).ready(function() {
 	});
 });
 var map;
-					function initMap() {
-						
-						map = new google.maps.Map(document.getElementById('map'), {
-							center: {lat: -34.397, lng: 150.644},
-							zoom: 8
-						});
-						
-					}
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: { lat: -34.397, lng: 150.644 },
+		zoom: 8
+	});
+}
