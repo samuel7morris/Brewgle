@@ -31,7 +31,6 @@ $(document).ready(function() {
 					phone.append(rating);
 					var latitude = response.businesses[i].coordinates.latitude;
 					var longitude = response.businesses[i].coordinates.longitude;
-					var pinName = response.businesses[i].name.toString();
 					coordinates = { lat: latitude, lng: longitude };
 					latLong.push(coordinates);
 					map = new google.maps.Map(document.getElementById('map'), {
@@ -40,6 +39,7 @@ $(document).ready(function() {
 					});
 					//Loop through the array of responses and create a marker for each using their geographic location and displaying the name
 					for (var i = 0; i < latLong.length; i++) {
+						var pinName = response.businesses[i].name.toString();
 						var marker = new google.maps.Marker({
 							position: { lat: latLong[i].lat, lng: latLong[i].lng },
 							map: map,
@@ -47,6 +47,7 @@ $(document).ready(function() {
 							title: pinName
 						});
 					}
+					//Set the markers on the map
 					marker.setMap(map);
 				}
 			});
