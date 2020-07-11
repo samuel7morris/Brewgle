@@ -11,6 +11,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.title {
+  font-family: 'Galada', cursive;
+}
 
 #submit-button {
   box-shadow: inset -7px -3px 33px -13px #54a3f7;
