@@ -49,10 +49,16 @@
       .subtitle {
         font-family: 'Galada', cursive;
       }
+
+      #top {
+        background-color: #d09a58;
+        border-radius: 17px;
+        font-family: 'Galada', cursive;
+      }
       
       #submit-button {
-        box-shadow: inset -7px -3px 33px -13px #54a3f7;
-        background: linear-gradient(to bottom, #2d6fe0 5%, #8f1176 100%);
+        box-shadow: inset -7px -3px 33px -13px #7e3e3e;
+        background: linear-gradient(to bottom, #d09a58 5%, #7e3e3e 100%);
         background-color: #2d6fe0;
         border-radius: 17px;
         display: inline-block;
