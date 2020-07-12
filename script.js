@@ -60,7 +60,7 @@ $(document).ready(function() {
 var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: { lat: -34.397, lng: 150.644 },
-		zoom: 10
+		center: { lat: 53.349463, lng: -6.274780 },
+		zoom: 12
 	});
 }
