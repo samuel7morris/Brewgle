@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brewgle</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <body>
-        
-        <section class="section has-background-info">
-            <div class="container has-text-centered">
-                <h1 class="title">Brewgle</h1>
-                <h2 class="subtitle">Your Friendly Neighborhood Brewery Finder</h2>
-                <h3 class="subtitle">Enter Your Location And Satisfy Your Thirst!</h3>> 
+
+<body>
+
+    <section class="section has-background-info">
+        <div class="container has-text-centered">
+            <h1 class="title">Brewgle</h1>
+            <h2 class="subtitle">Your Friendly Neighborhood Brewery Finder</h2>
+            <h3 class="subtitle">Enter Your Location And Satisfy Your Thirst!</h3>>
+        </div>
+    </section class="section">
+
+    <section class="results has-text-centered has-background-danger-dark mr-3">
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" placeholder="City" id="user-input">
             </div>
-        </section class="section">
-        
-        <section class="results has-text-centered has-background-danger-dark mr-3">      
-            <div class="level">
-                <form id="searching">
-                    <input class="input is-medium level-left" type="text" placeholder="City" id="user-input">
-                    <input class="button" type="submit" value="Find Brews!" id="submit-button">
-                </form>
+            <div class="control">
+                <a class="button is-info" id="submit-button">
+                    Search
+                </a>
             </div>
-        </section>
-        
-        <div class="columns">
-            
-            
-            <div class="column has-background-danger-dark is-4">
-                <section class="section">
-                    <div class="container">
-                        <h1 class="title">List of Breweries</h1>
-                        <table id="top">
-                        </table>
-                    </div>
-                </section>
-            </div>
-            
-            
-            <div class="column has-background-danger-dark " >
-                <section class="section">
-                    
-                    <h1 class="title">Map</h1>
-                </section>
-                    
-                    <div id="map" style="width:100%;height:700px;">
+        </div>
+    </section>
+
+    <div class="columns">
 
 
-                    </div> 
-
-            </div>
-                    
+        <div class="column has-background-danger-dark is-4">
+            <section class="section">
+                <div class="container">
+                    <h2 class="title">List of Breweries</h2>
+                    <table id="top">
+                    </table>
+                </div>
+            </section>
         </div>
 
-                
-<!-- Our Script File -->
-<script type="text/javascript" src="script.js"></script>
-<!-- GMaps API -->
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ&callback=initMap"></script>
+
+        <div class="column has-background-danger-dark ">
+            <section class="section">
+
+                <h2 class="title">Map</h2>
+            </section>
+
+            <div id="map" style="width:100%;height:700px;">
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Our Script File -->
+    <script type="text/javascript" src="script.js"></script>
+    <!-- GMaps API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ&callback=initMap">
+    </script>
 </body>
-</html>      
+
+</html>
