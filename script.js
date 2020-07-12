@@ -64,3 +64,16 @@ function initMap() {
 		zoom: 10
 	});
 }
+
+$( function() {
+    var availableTags = [
+      "New York","Los Angeles","Chicago","Houston","Philadelphia","Phoenix","San Antonio","San Diego","Dallas","San Jose","Austin",
+      "Jacksonville","San Francisco","Indianapolis","Columbus","Fort Worth","Charlotte","Seattle","Denver","El Paso","Detroit",
+	  "Washington","Boston","Memphis","Nashville","Portland","Oklahoma City","Las Vegas","Baltimore","Louisville","Milwaukee","Albuquerque",
+	  "Tucson","Fresno","Sacramento","Kansas City","Long Beach","Raleigh","Omaha","Miami","Oakland","Minneapolis","Tulsa","Wichita","New Orleans","Arlington",
+	  "Littleton","Boulder","Fort Collins","Vail","Golden","Breckenridge"
+    ];
+    $( "#user-input" ).autocomplete({
+      source: availableTags
+    });
+  } );
