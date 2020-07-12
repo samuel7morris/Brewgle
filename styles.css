@@ -15,6 +15,13 @@ body {
   font-family: 'Galada', cursive;
 }
 
+#search-bar {
+  margin: 15px;
+}
+#submit-button{
+  margin: 15px 0px 0px 0px;
+}
+
 #submit-button {
   box-shadow: inset -7px -3px 33px -13px #54a3f7;
   background: linear-gradient(to bottom, #2d6fe0 5%, #8f1176 100%);
