@@ -33,17 +33,22 @@ $(document).ready(function() {
 					var longitude = response.businesses[i].coordinates.longitude;
 					coordinates = { lat: latitude, lng: longitude };
 					latLong.push(coordinates);
-					console.log(latLong);
-					for (var i=0;i < latLong.length;i++) {
+					map = new google.maps.Map(document.getElementById('map'), {
+						center: coordinates,
+						zoom: 12
+					});
+					//Loop through the array of responses and create a marker for each using their geographic location and displaying the name
+					for (var i = 0; i < latLong.length; i++) {
+						var pinName = response.businesses[i].name.toString();
 						var marker = new google.maps.Marker({
-							position: {lat: latLong[i].lat,lng:latLong[i].lng},
+							position: { lat: latLong[i].lat, lng: latLong[i].lng },
 							map: map,
 							center: coordinates,
-							title: name.toString()
+							title: pinName
 						});
 					}
+					//Set the markers on the map
 					marker.setMap(map);
-
 				}
 			});
 		}
@@ -53,11 +58,22 @@ $(document).ready(function() {
 	});
 });
 var map;
-					function initMap() {
-						
-						map = new google.maps.Map(document.getElementById('map'), {
-							center: {lat: -34.397, lng: 150.644},
-							zoom: 8
-						});
-						
-					}
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: { lat: 53.349463, lng: -6.274780 },
+		zoom: 12
+	});
+}
+
+$( function() {
+    var availableTags = [
+      "New York","Los Angeles","Chicago","Houston","Philadelphia","Phoenix","San Antonio","San Diego","Dallas","San Jose","Austin",
+      "Jacksonville","San Francisco","Indianapolis","Columbus","Fort Worth","Charlotte","Seattle","Denver","El Paso","Detroit",
+	  "Washington","Boston","Memphis","Nashville","Portland","Oklahoma City","Las Vegas","Baltimore","Louisville","Milwaukee","Albuquerque",
+	  "Tucson","Fresno","Sacramento","Kansas City","Long Beach","Raleigh","Omaha","Miami","Oakland","Minneapolis","Tulsa","Wichita","New Orleans","Arlington",
+	  "Littleton","Boulder","Fort Collins","Vail","Golden","Breckenridge"
+    ];
+    $( "#user-input" ).autocomplete({
+      source: availableTags
+    });
+  } );
