@@ -13,7 +13,7 @@
     
     <body>
         <div class="column mx-3">
-            <section class="sectionTitle background-image">
+            <section class="sectionTitle background-image" id="header">
                 <div class="container has-text-centered">
                     <h1 class="title has-text-weight-bold">Brewgle</h1>
                     <h2 class="subtitle">Your Friendly Neighborhood Brewery Finder</h2>
@@ -24,11 +24,10 @@
         </section>
         <div class="columns mx-3">
             <div class="column">
-                <section class="section background-image">
+                <section class="section background-image" id="search-container">
                     <div class="container">
+                        <h1 class="title">List of Breweries</h1>
                         <form id="searching">
-                            <!-- <input class=" input is-centered is-medium has-addons" type="text" placeholder="City" id="user-input">
-                            <input class="button" type="submit" value="Find Brews!" id="submit-button"> -->
                             <div class="field has-addons">
                                 <div class="control">
                                   <input class="input" type="text" placeholder="Find a repository" id="user-input">
@@ -41,7 +40,6 @@
                               </div>
                         </form>
                         <br>
-                        <h1 class="title">List of Breweries</h1>
                         <table id="top" style="width:100%;height:700px;">
                         </table>
                     </div>

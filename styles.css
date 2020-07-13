@@ -56,7 +56,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #d09a58;
 }
 
 .background-image {
@@ -99,6 +99,14 @@ body {
 
 .subtitle {
   font-family: 'Galada', cursive;
+}
+
+#header {
+  padding-top: 15px;
+}
+
+#search-container{
+  padding-top: 10px;
 }
 
 #submit-button {
