@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brewgle</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-    <body>
-        <div class="column mx-3">
-            <section class="sectionTitle background-image" id="header">
-                <div class="container has-text-centered">
-                    <h1 class="title has-text-weight-bold">Brewgle</h1>
-                    <h2 class="subtitle">Your Friendly Neighborhood Brewery Finder</h2>
-                    <h2 class="subtitle">Enter Your Location And Satisfy Your Thirst!</h2>
+
+<body>
+    <div class="column mx-3">
+        <section class="sectionTitle background-image" id="header">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-weight-bold">Brewgle</h1>
+                <h2 class="subtitle">Your Friendly Neighborhood Brewery Finder</h2>
+                <h2 class="subtitle">Enter Your Location And Satisfy Your Thirst!</h2>
+            </div>
+        </section>
+    </div>
+    </section>
+    <div class="columns mx-3">
+        <div class="column">
+            <section class="section background-image" id="search-container">
+                <div class="container">
+                    <h1 class="title">List of Breweries</h1>
+                    <form id="searching">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Find a repository" id="user-input">
+                            </div>
+                            <div class="control">
+                                <a class="button is-info" id="submit-button">
+                                    Search
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <table id="top" style="width:100%;height:700px;">
+                    </table>
                 </div>
             </section>
         </div>
-        </section>
-        <div class="columns mx-3">
-            <div class="column">
-                <section class="section background-image" id="search-container">
-                    <div class="container">
-                        <h1 class="title">List of Breweries</h1>
-                        <form id="searching">
-                            <div class="field has-addons">
-                                <div class="control">
-                                  <input class="input" type="text" placeholder="Find a repository" id="user-input">
-                                </div>
-                                <div class="control">
-                                  <a class="button is-info" id="submit-button">
-                                    Search
-                                  </a>
-                                </div>
-                              </div>
-                        </form>
-                        <br>
-                        <table id="top" style="width:100%;height:700px;">
-                        </table>
-                    </div>
+        <div class="column is-two-thirds">
+            <div class="column background-image">
+                <h2 class="title">Where's the Beer?</h2>
                 </section>
-            </div>
-            <div class="column is-two-thirds">
-                <div class="column background-image" >
-                        <h2 class="title">Where's the Beer?</h2>
-                    </section>
-                    <div id="map" style="width:100%;height:1000px;">
-                    </div> 
+                <div id="map" style="width:100%;height:1000px;">
                 </div>
             </div>
         </div>
-    </body>       
-       
+    </div>
+</body>
+
 <!-- Our Script File -->
 <script type="text/javascript" src="script.js"></script>
 <!-- GMaps API -->
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-advEZHzPU9oDy_THa6VyYKawF7ndVtQ&callback=initMap"></script>
 </body>
-</html>      
+
+</html>
