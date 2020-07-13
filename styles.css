@@ -50,11 +50,10 @@
         font-family: 'Galada', cursive;
       }
 
-<<<<<<< HEAD
       #top {
         background-color: #d09a58;
         border-radius: 17px;
-        font-family: 'Galada', cursive;
+        font-family: 'Galada', cursive , Bold;
       }
       
       #submit-button {
@@ -86,89 +85,3 @@
         background-color: #f5f5f5;
       }
       
-=======
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-}
-
-.background-image {
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190813/pngtree-oktoberfest-beer-background-vector-illustration-with-wheat-a-bottle-of-image_290547.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #999;
-}
-
-.column {
-  border-radius: 30px;
-  background-color: #d09a58;
-}
-
-.sectionTitle {
-  background-color: #d09a58;
-  border-radius: 30px;
-}
-
-.section {
-  border-radius: 30px;
-  background-color: #d09a58;
-}
-
-.results {
-  background-color: #7e3e3e;
-  border-radius: 30px;
-}
-
-.table {
-  font-family: 'Galada', cursive;
-}
-
-.title {
-  font-family: 'Galada', cursive;
-  font-size: xx-large;
-}
-
-.subtitle {
-  font-family: 'Galada', cursive;
-}
-
-#submit-button {
-  box-shadow: -10px -4px 17px -6px #276873;
-  background: linear-gradient(to bottom, #f5b53f 5%, #a18120 100%);
-  background-color: #f5b53f;
-  border-radius: 12px;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 25px;
-  padding: 11px 44px;
-  text-decoration: none;
-  text-shadow: 0px -2px 18px #3d768a;
-}
-
-#submit-button:hover {
-  background: linear-gradient(to bottom, #a18120 5%, #f5b53f 100%);
-  background-color: #a18120;
-}
-
-#submit-button:active {
-  position: relative;
-  top: 1px;
-}
-
-tr:hover {
-  background-color: #f5f5f5;
-}
-
-.ui-autocomplete {
-background-color:lightgray;
-}
-
->>>>>>> 1cc4061e58f50f19d247a994a53bc7a9faac2bed
