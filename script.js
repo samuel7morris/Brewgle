@@ -22,10 +22,13 @@ $(document).ready(function() {
 				for (var i = 0; i < response.businesses.length; i++) {
 					var row = $('<tr>');
 					var name = $('<td>').text(response.businesses[i].name);
-					var rating = $('<td>').text('Stars: ' + response.businesses[i].rating);
-					var phone = $('<td>').text('Phone: ' + response.businesses[i].phone);
+					var phoneIcon = $('<img>').attr('src','https://img.icons8.com/android/24/000000/phone.png');
+					var beerIcon = $('<img>').attr('src','https://img.icons8.com/pastel-glyph/64/000000/beer.png');
+					var starIcon = $('<img>').attr('src','https://img.icons8.com/ios-glyphs/30/000000/star.png');
+					var rating = $('<td>').html(starIcon).append(response.businesses[i].rating);
+					var phone = $('<td>').html(phoneIcon).append(response.businesses[i].phone);
 					$('#top').append(row);
-					row.append(name);
+					row.html(beerIcon).append(name);
 					name.append(phone);
 					phone.append(rating);
 					//Take coordinates from response and format data for Google maps
@@ -39,10 +42,10 @@ $(document).ready(function() {
 						zoom: 12
 					});
 					//Loop through the array of responses and create a marker for each using their geographic location and displaying the name
-					for (var i = 0; i < latLong.length; i++) {
-						var pinName = response.businesses[i].name.toString();
+					for (var j = 0; j < latLong.length; j++) {
+						var pinName = response.businesses[j].name.toString();
 						var marker = new google.maps.Marker({
-							position: { lat: latLong[i].lat, lng: latLong[i].lng },
+							position: { lat: latLong[j].lat, lng: latLong[j].lng },
 							map: map,
 							center: coordinates,
 							title: pinName
