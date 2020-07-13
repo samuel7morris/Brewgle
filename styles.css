@@ -107,7 +107,13 @@ body {
 
 #search-container{
   padding-top: 10px;
+  height: 700px;
+  overflow: scroll;
 }
+
+/* #top {
+  height: 500px;
+} */
 
 #submit-button {
   box-shadow: -10px -4px 17px -6px #276873;
