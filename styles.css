@@ -50,38 +50,88 @@
         font-family: 'Galada', cursive;
       }
 
-      #top {
-        background-color: #d09a58;
-        border-radius: 17px;
-        font-family: 'Galada', cursive , Bold;
-      }
-      
-      #submit-button {
-        box-shadow: inset -7px -3px 33px -13px #7e3e3e;
-        background: linear-gradient(to bottom, #d09a58 5%, #7e3e3e 100%);
-        background-color: #2d6fe0;
-        border-radius: 17px;
-        display: inline-block;
-        cursor: pointer;
-        color: #ffffff;
-        font-family: Arial;
-        font-size: 16px;
-        padding: 9px 63px;
-        text-decoration: none;
-        text-shadow: 0px 1px 0px #0ab1c7;
-      }
-      
-      #submit-button:hover {
-        background: linear-gradient(to bottom, #8f1176 5%, #2d6fe0 100%);
-        background-color: #8f1176;
-      }
-      
-      #submit-button:active {
-        position: relative;
-        top: 1px;
-      }
-      
-      tr:hover {
-        background-color: #f5f5f5;
-      }
-      
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.background-image {
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190813/pngtree-oktoberfest-beer-background-vector-illustration-with-wheat-a-bottle-of-image_290547.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #999;
+}
+
+.column {
+  border-radius: 30px;
+  background-color: #d09a58;
+}
+
+.sectionTitle {
+  background-color: #d09a58;
+  border-radius: 30px;
+}
+
+.section {
+  border-radius: 30px;
+  background-color: #d09a58;
+}
+
+.results {
+  background-color: #7e3e3e;
+  border-radius: 30px;
+}
+
+.table {
+  font-family: 'Galada', cursive;
+}
+
+.title {
+  font-family: 'Galada', cursive;
+  font-size: xx-large;
+}
+
+.subtitle {
+  font-family: 'Galada', cursive;
+}
+
+#submit-button {
+  box-shadow: -10px -4px 17px -6px #276873;
+  background: linear-gradient(to bottom, #f5b53f 5%, #a18120 100%);
+  background-color: #f5b53f;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 25px;
+  padding: 11px 44px;
+  text-decoration: none;
+  text-shadow: 0px -2px 18px #3d768a;
+}
+
+#submit-button:hover {
+  background: linear-gradient(to bottom, #a18120 5%, #f5b53f 100%);
+  background-color: #a18120;
+}
+
+#submit-button:active {
+  position: relative;
+  top: 1px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.ui-autocomplete {
+background-color:lightgray;
+width: 40px;
+}
+
